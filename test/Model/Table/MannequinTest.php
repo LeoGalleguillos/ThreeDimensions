@@ -19,7 +19,7 @@ class MannequinTest extends TableTestCase
     {
         $this->sqlPath = $_SERVER['PWD'] . '/sql/leogalle_test/mannequin/';
 
-        $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
+        $configArray     = require($_SERVER['PWD'] . '/config/autoload/local.php');
         $configArray     = $configArray['db']['adapters']['leogalle_test'];
         $this->adapter   = new Adapter($configArray);
 
@@ -48,6 +48,21 @@ class MannequinTest extends TableTestCase
         $this->assertInstanceOf(
             ThreeDimensionsTable\Mannequin::class,
             $this->mannequinTable
+        );
+    }
+
+    public function testUpdateWhereUserId()
+    {
+        $this->assertFalse(
+            $this->mannequinTable->updateWhereUserId(
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            )
         );
     }
 }
