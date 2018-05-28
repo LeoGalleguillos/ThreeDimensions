@@ -26,6 +26,11 @@ class Module
                         $serviceManager->get('main')
                     );
                 },
+                ThreeDimensionsTable\Mannequin::class => function ($serviceManager) {
+                    return new ThreeDimensionsTable\Mannequin(
+                        $serviceManager->get('main')
+                    );
+                },
             ],
         ];
     }
