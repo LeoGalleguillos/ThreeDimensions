@@ -13,10 +13,12 @@ class MannequinTest extends TableTestCase
     /**
      * @var string
      */
-    protected $sqlPath = __DIR__ . '/../../..' . '/sql/leogalle_test/cube/';
+    protected $sqlPath;
 
     protected function setUp()
     {
+        $this->sqlPath = $_SERVER['PWD'] . '/sql/leogalle_test/mannequin/';
+
         $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
         $configArray     = $configArray['db']['adapters']['leogalle_test'];
         $this->adapter   = new Adapter($configArray);
