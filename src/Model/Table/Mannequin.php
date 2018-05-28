@@ -102,17 +102,38 @@ class Mannequin
         return $this->adapter->query($sql)->execute($parameters)->current();
     }
 
-    public function updateViewsWhereThreeDimensionsId(int $cubeId) : bool
-    {
+    public function updateWhereUserId(
+        float $translateX,
+        float $translateY,
+        float $translateZ,
+        float $rotateX,
+        float $rotateY,
+        float $rotateZ,
+        int $userId
+    ) : bool {
         $sql = '
-            UPDATE `cube`
-               SET `cube`.`views` = `cube`.`views` + 1
-             WHERE `cube`.`cube_id` = :cubeId
+            UPDATE `mannequin`
+               SET `translate_x` = ?
+                 , `translate_y` = ?
+                 , `translate_z` = ?
+                 , `rotate_x` = ?
+                 , `rotate_y` = ?
+                 , `rotate_z` = ?
+             WHERE `user_id` = ?
                  ;
         ';
         $parameters = [
-            'cubeId' => $cubeId,
+            $translateX,
+            $translateY,
+            $translateZ,
+            $rotateX,
+            $rotateY,
+            $rotateZ,
+            $userId,
         ];
-        return (bool) $this->adapter->query($sql, $parameters)->getAffectedRows();
+        return (bool) $this->adapter
+                           ->query($sql)
+                           ->execute($parameters)
+                           ->getAffectedRows();
     }
 }
