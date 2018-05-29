@@ -51,6 +51,21 @@ class Mannequin
         return (int) $row['count'];
     }
 
+    public function selectCountWhereUserId(int $userId)
+    {
+        $sql = '
+            SELECT COUNT(*) AS `count`
+              FROM `mannequin`
+             WHERE `user_id` = ?
+                 ;
+        ';
+        $parameters = [
+            $userId,
+        ];
+        $row = $this->adapter->query($sql)->execute($parameters)->current();
+        return (int) $row['count'];
+    }
+
     public function selectOrderByCreatedDesc() : Generator
     {
         $sql = '
