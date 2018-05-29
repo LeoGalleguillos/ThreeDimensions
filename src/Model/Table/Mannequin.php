@@ -21,22 +21,18 @@ class Mannequin
      * @return int
      */
     public function insert(
-        int $userId = null,
-        string $subject,
-        string $message = null
+        int $userId
     ) : int {
         $sql = '
             INSERT
-              INTO `cube` (
-                   `user_id`, `subject`, `message`, `created`
+              INTO `mannequin` (
+                   `user_id`
                    )
-            VALUES (:userId, :subject, :message, UTC_TIMESTAMP())
+            VALUES (?)
                  ;
         ';
         $parameters = [
-            'userId'       => $userId,
-            'subject'     => $subject,
-            'message' => $message,
+            $userId,
         ];
         return $this->adapter
                     ->query($sql)
