@@ -119,6 +119,7 @@ class Mannequin
                  , `rotate_x` = ?
                  , `rotate_y` = ?
                  , `rotate_z` = ?
+                 , `updated` = CURRENT_TIMESTAMP()
              WHERE `user_id` = ?
                  ;
         ';
