@@ -7,7 +7,7 @@ CREATE TABLE `mannequin` (
     `rotate_x` FLOAT(8, 2) SIGNED,
     `rotate_y` FLOAT(8, 2) SIGNED,
     `rotate_z` FLOAT(8, 2) SIGNED,
-    `created` datetime not null,
+    `created` datetime not null default CURRENT_TIMESTAMP(),
     `updated` datetime default null,
     PRIMARY KEY (`mannequin_id`)
 ) charset=utf8;
