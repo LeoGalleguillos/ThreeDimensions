@@ -2,6 +2,7 @@
 namespace LeoGalleguillos\ThreeDimensions;
 
 use LeoGalleguillos\ThreeDimensions\Model\Factory as ThreeDimensionsFactory;
+use LeoGalleguillos\ThreeDimensions\Model\Service as ThreeDimensionsService;
 use LeoGalleguillos\ThreeDimensions\Model\Table as ThreeDimensionsTable;
 
 class Module
@@ -25,6 +26,11 @@ class Module
                 ThreeDimensionsFactory\Mannequin::class => function ($serviceManager) {
                     return new ThreeDimensionsFactory\Mannequin(
                         $serviceManager->get(ThreeDimensionsTable\Mannequin::class)
+                    );
+                },
+                ThreeDimensionsService\Mannequin\Json::class => function ($serviceManager) {
+                    return new ThreeDimensionsService\Mannequin\Json(
+
                     );
                 },
                 ThreeDimensionsTable\Cube::class => function ($serviceManager) {
