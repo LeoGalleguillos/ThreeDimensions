@@ -87,28 +87,32 @@ class Mannequin
     }
 
     /**
-     * Select where cube ID.
+     * Select where user ID.
      *
-     * @param int $cubeId
+     * @param int $userId
      * @return array
      */
-    public function selectWhereThreeDimensionsId(int $cubeId) : array
+    public function selectWhereUserId(int $userId) : array
     {
         $sql = '
-            SELECT `cube`.`cube_id`
-                 , `cube`.`user_id`
-                 , `cube`.`subject`
-                 , `cube`.`message`
-                 , `cube`.`created`
-                 , `cube`.`views`
-              FROM `cube`
-             WHERE `cube`.`cube_id` = :cubeId
-             ORDER
-                BY `cube`.`created` ASC
+            SELECT `mannequin`.`mannequin_id`
+                 , `mannequin`.`translate_x`
+                 , `mannequin`.`translate_y`
+                 , `mannequin`.`translate_z`
+                 , `mannequin`.`rotate_x`
+                 , `mannequin`.`rotate_y`
+                 , `mannequin`.`rotate_z`
+                 , `mannequin`.`transform_origin_x`
+                 , `mannequin`.`transform_origin_y`
+                 , `mannequin`.`transform_origin_z`
+                 , `mannequin`.`created`
+                 , `mannequin`.`updated`
+              FROM `mannequin`
+             WHERE `user_id` = ?
                  ;
         ';
         $parameters = [
-            'cubeId' => $cubeId,
+            $userId,
         ];
         return $this->adapter->query($sql)->execute($parameters)->current();
     }
