@@ -49,6 +49,24 @@ class Entity
         return $this;
     }
 
+    public function setTransformOriginX(float $transformOriginX) : ThreeDimensionsEntity\Entity
+    {
+        $this->transformOriginX = $transformOriginX;
+        return $this;
+    }
+
+    public function setTransformOriginY(float $transformOriginY) : ThreeDimensionsEntity\Entity
+    {
+        $this->transformOriginY = $transformOriginY;
+        return $this;
+    }
+
+    public function setTransformOriginZ(float $transformOriginZ) : ThreeDimensionsEntity\Entity
+    {
+        $this->transformOriginZ = $transformOriginZ;
+        return $this;
+    }
+
     public function setTranslateX(float $translateX) : ThreeDimensionsEntity\Entity
     {
         $this->translateX = $translateX;
