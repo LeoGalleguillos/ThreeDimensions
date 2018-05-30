@@ -28,7 +28,11 @@ class Mannequin
         array $array
     ) : ThreeDimensionsEntity\Mannequin {
         $mannequinEntity = new ThreeDimensionsEntity\Mannequin();
-        $mannequinEntity->setCreated(new DateTime($array['created']));
+        $mannequinEntity->setCreated(new DateTime($array['created']))
+                        ->setMannequinId($array['mannequin_id'])
+                        ->setTranslateX($array['translate_x'])
+                        ->setTranslateY($array['translate_y'])
+                        ->setTranslateZ($array['translate_z']);
 
         return $mannequinEntity;
     }
