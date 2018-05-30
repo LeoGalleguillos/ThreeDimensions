@@ -2,9 +2,10 @@
 namespace LeoGalleguillos\ThreeDimensions\Model\Entity;
 
 use DateTime;
+use JsonSerializable;
 use LeoGalleguillos\ThreeDimensions\Model\Entity as ThreeDimensionsEntity;
 
-class Mannequin extends ThreeDimensionsEntity\Entity
+class Mannequin extends ThreeDimensionsEntity\Entity implements JsonSerializable
 {
     protected $mannequinId;
     protected $userId;
@@ -17,6 +18,15 @@ class Mannequin extends ThreeDimensionsEntity\Entity
     public function getUserId() : int
     {
         return $this->userId;
+    }
+
+    public function jsonSerialize()
+    {
+		$array = [];
+		foreach ($this as $key => $value) {
+			$array[$key] = $value;
+		}
+		return $array;
     }
 
     public function setMannequinId(int $mannequinId) : ThreeDimensionsEntity\Mannequin
