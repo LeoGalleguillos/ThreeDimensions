@@ -31,6 +31,24 @@ class Entity
         return $this;
     }
 
+    public function setRotateX(float $rotateX) : ThreeDimensionsEntity\Entity
+    {
+        $this->rotateX = $rotateX;
+        return $this;
+    }
+
+    public function setRotateY(float $rotateY) : ThreeDimensionsEntity\Entity
+    {
+        $this->rotateY = $rotateY;
+        return $this;
+    }
+
+    public function setRotateZ(float $rotateZ) : ThreeDimensionsEntity\Entity
+    {
+        $this->rotateZ = $rotateZ;
+        return $this;
+    }
+
     public function setTranslateX(float $translateX) : ThreeDimensionsEntity\Entity
     {
         $this->translateX = $translateX;
