@@ -41,7 +41,7 @@ class Mannequin
      */
     public function buildFromUserId(
         int $userId
-    ) : ThreeDimensionsEntity\ThreeDimensions {
+    ) : ThreeDimensionsEntity\Mannequin {
         return $this->buildFromArray(
             $this->mannequinTable->selectWhereUserId($userId)
         );
