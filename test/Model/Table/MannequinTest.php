@@ -61,6 +61,9 @@ class MannequinTest extends TableTestCase
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
                 0
             )
         );

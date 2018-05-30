@@ -793,12 +793,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "e244c19aec6a1f0a2ff9e498b9b4bed22537730a"
+                "reference": "3eaf040f20154d27d6da59ca2c6e28ac8fd56dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/e244c19aec6a1f0a2ff9e498b9b4bed22537730a",
-                "reference": "e244c19aec6a1f0a2ff9e498b9b4bed22537730a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3eaf040f20154d27d6da59ca2c6e28ac8fd56dce",
+                "reference": "3eaf040f20154d27d6da59ca2c6e28ac8fd56dce",
                 "shasum": ""
             },
             "require": {
@@ -844,7 +844,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2018-01-07 17:10:51"
+            "time": "2018-05-29 13:50:43"
         },
         {
             "name": "psr/container",
@@ -1500,12 +1500,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "1fc2d96ee97d5052f44662563587a0213895343d"
+                "reference": "53927dddf3afa2088b355188e143bba42159bf5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/1fc2d96ee97d5052f44662563587a0213895343d",
-                "reference": "1fc2d96ee97d5052f44662563587a0213895343d",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/53927dddf3afa2088b355188e143bba42159bf5d",
+                "reference": "53927dddf3afa2088b355188e143bba42159bf5d",
                 "shasum": ""
             },
             "require": {
@@ -1542,7 +1542,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-05-26 14:16:30"
+            "time": "2018-05-29 14:25:02"
         },
         {
             "name": "zendframework/zend-config",
@@ -1550,12 +1550,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-config.git",
-                "reference": "eb1a6f3b8f8123719e12475df7c7d32364dc6260"
+                "reference": "f02d94b13bbb782ee7bd632d7f1dbf5c6849bbfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-config/zipball/eb1a6f3b8f8123719e12475df7c7d32364dc6260",
-                "reference": "eb1a6f3b8f8123719e12475df7c7d32364dc6260",
+                "url": "https://api.github.com/repos/zendframework/zend-config/zipball/f02d94b13bbb782ee7bd632d7f1dbf5c6849bbfe",
+                "reference": "f02d94b13bbb782ee7bd632d7f1dbf5c6849bbfe",
                 "shasum": ""
             },
             "require": {
@@ -1602,7 +1602,7 @@
                 "config",
                 "zf"
             ],
-            "time": "2018-04-24 19:27:49"
+            "time": "2018-05-29 19:58:20"
         },
         {
             "name": "zendframework/zend-console",
@@ -1663,12 +1663,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-db.git",
-                "reference": "71d722f4f4fb746e08b9b9627ed64a5d2233e216"
+                "reference": "c6032ad56e8107739e0ccc84c0e277f42eb724a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-db/zipball/71d722f4f4fb746e08b9b9627ed64a5d2233e216",
-                "reference": "71d722f4f4fb746e08b9b9627ed64a5d2233e216",
+                "url": "https://api.github.com/repos/zendframework/zend-db/zipball/c6032ad56e8107739e0ccc84c0e277f42eb724a5",
+                "reference": "c6032ad56e8107739e0ccc84c0e277f42eb724a5",
                 "shasum": ""
             },
             "require": {
@@ -1713,7 +1713,7 @@
                 "db",
                 "zf"
             ],
-            "time": "2018-04-09 13:52:38"
+            "time": "2018-05-29 12:24:44"
         },
         {
             "name": "zendframework/zend-dom",

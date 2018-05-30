@@ -120,6 +120,9 @@ class Mannequin
         float $rotateX,
         float $rotateY,
         float $rotateZ,
+        float $transformOriginX,
+        float $transformOriginY,
+        float $transformOriginZ,
         int $userId
     ) : bool {
         $sql = '
@@ -130,6 +133,9 @@ class Mannequin
                  , `rotate_x` = ?
                  , `rotate_y` = ?
                  , `rotate_z` = ?
+                 , `transform_origin_x` = ?
+                 , `transform_origin_y` = ?
+                 , `transform_origin_z` = ?
                  , `updated` = CURRENT_TIMESTAMP()
              WHERE `user_id` = ?
                  ;
@@ -141,6 +147,9 @@ class Mannequin
             $rotateX,
             $rotateY,
             $rotateZ,
+            $transformOriginX,
+            $transformOriginY,
+            $transformOriginZ,
             $userId,
         ];
         return (bool) $this->adapter
