@@ -30,9 +30,16 @@ class Mannequin
         $mannequinEntity = new ThreeDimensionsEntity\Mannequin();
         $mannequinEntity->setCreated(new DateTime($array['created']))
                         ->setMannequinId($array['mannequin_id'])
+                        ->setRotateX($array['rotateX'])
+                        ->setRotateY($array['rotateY'])
+                        ->setRotateZ($array['rotateZ'])
+                        ->setTranslateOriginX($array['translate_origin_x'])
+                        ->setTranslateOriginY($array['translate_origin_y'])
+                        ->setTranslateOriginZ($array['translate_origin_z'])
                         ->setTranslateX($array['translate_x'])
                         ->setTranslateY($array['translate_y'])
-                        ->setTranslateZ($array['translate_z']);
+                        ->setTranslateZ($array['translate_z'])
+                        ->setUserId($array['user_id']);
 
         return $mannequinEntity;
     }
