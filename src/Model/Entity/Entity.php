@@ -31,6 +31,24 @@ class Entity
         return $this;
     }
 
+    public function setTranslateX(float $translateX) : ThreeDimensionsEntity\Entity
+    {
+        $this->translateX = $translateX;
+        return $this;
+    }
+
+    public function setTranslateY(float $translateY) : ThreeDimensionsEntity\Entity
+    {
+        $this->translateY = $translateY;
+        return $this;
+    }
+
+    public function setTranslateZ(float $translateZ) : ThreeDimensionsEntity\Entity
+    {
+        $this->translateZ = $translateZ;
+        return $this;
+    }
+
     public function setUpdated(DateTime $created) : ThreeDimensionsEntity\Entity
     {
         $this->updated = $updated;
