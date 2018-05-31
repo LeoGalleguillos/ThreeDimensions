@@ -52,6 +52,14 @@ class MannequinTest extends TableTestCase
         );
     }
 
+    public function testSelectCount()
+    {
+        $this->assertSame(
+            0,
+            $this->mannequinTable->selectCount()
+        );
+    }
+
     public function testUpdateWhereUserId()
     {
         $this->assertFalse(
