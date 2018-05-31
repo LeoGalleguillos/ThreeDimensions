@@ -17,6 +17,7 @@ class MannequinTest extends TableTestCase
 
     protected function setUp()
     {
+        parent::setUp();
         $this->sqlPath = $_SERVER['PWD'] . '/sql/leogalle_test/mannequin/';
 
         $configArray     = require($_SERVER['PWD'] . '/config/autoload/local.php');

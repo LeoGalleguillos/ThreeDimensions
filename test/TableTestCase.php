@@ -8,7 +8,12 @@ class TableTestCase extends TestCase
     /**
      * @var string
      */
-    protected $sqlDirectory = __DIR__ . '/../sql';
+    protected $sqlDirectory;
+
+    protected function setUp()
+    {
+        $this->sqlDirectory = $_SERVER['PWD'] . '/sql';
+    }
 
     protected function setForeignKeyChecks0()
     {

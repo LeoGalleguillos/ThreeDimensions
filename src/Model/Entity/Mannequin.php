@@ -20,7 +20,7 @@ class Mannequin extends ThreeDimensionsEntity\Entity implements JsonSerializable
         return $this->userId;
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize() : array
     {
 		$array = [];
 		foreach ($this as $key => $value) {

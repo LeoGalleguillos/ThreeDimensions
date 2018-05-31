@@ -17,6 +17,7 @@ class CubeTest extends TableTestCase
 
     protected function setUp()
     {
+        parent::setUp();
         $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
         $configArray     = $configArray['db']['adapters']['leogalle_test'];
         $this->adapter   = new Adapter($configArray);
