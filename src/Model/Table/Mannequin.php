@@ -96,6 +96,7 @@ class Mannequin
     {
         $sql = '
             SELECT `mannequin`.`mannequin_id`
+                 , `mannequin`.`user_id`
                  , `mannequin`.`translate_x`
                  , `mannequin`.`translate_y`
                  , `mannequin`.`translate_z`
