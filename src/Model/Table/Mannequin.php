@@ -44,7 +44,7 @@ class Mannequin
     {
         $sql = '
             SELECT COUNT(*) AS `count`
-              FROM `cube`
+              FROM `mannequin`
                  ;
         ';
         $row = $this->adapter->query($sql)->execute()->current();
@@ -64,26 +64,6 @@ class Mannequin
         ];
         $row = $this->adapter->query($sql)->execute($parameters)->current();
         return (int) $row['count'];
-    }
-
-    public function selectOrderByCreatedDesc() : Generator
-    {
-        $sql = '
-            SELECT `cube`.`cube_id`
-                 , `cube`.`user_id`
-                 , `cube`.`subject`
-                 , `cube`.`message`
-                 , `cube`.`created`
-                 , `cube`.`views`
-              FROM `cube`
-             ORDER
-                BY `cube`.`created` DESC
-             LIMIT 100
-                 ;
-        ';
-        foreach ($this->adapter->query($sql)->execute() as $row) {
-            yield($row);
-        }
     }
 
     /**
