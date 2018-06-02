@@ -33,6 +33,12 @@ class Module
                         $serviceManager->get(ThreeDimensionsTable\Mannequin::class)
                     );
                 },
+                ThreeDimensionsService\Ground\Grounds::class => function ($serviceManager) {
+                    return new ThreeDimensionsService\Ground\Grounds(
+                        $serviceManager->get(ThreeDimensionsFactory\Ground::class),
+                        $serviceManager->get(ThreeDimensionsTable\Ground::class)
+                    );
+                },
                 ThreeDimensionsService\Mannequin\Json::class => function ($serviceManager) {
                     return new ThreeDimensionsService\Mannequin\Json(
 
