@@ -23,6 +23,11 @@ class Module
     {
         return [
             'factories' => [
+                ThreeDimensionsFactory\Ground::class => function ($serviceManager) {
+                    return new ThreeDimensionsFactory\Ground(
+                        $serviceManager->get(ThreeDimensionsTable\Ground::class)
+                    );
+                },
                 ThreeDimensionsFactory\Mannequin::class => function ($serviceManager) {
                     return new ThreeDimensionsFactory\Mannequin(
                         $serviceManager->get(ThreeDimensionsTable\Mannequin::class)
