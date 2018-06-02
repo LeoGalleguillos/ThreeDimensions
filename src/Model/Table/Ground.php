@@ -21,18 +21,51 @@ class Ground
      * @return int
      */
     public function insert(
-        int $userId
+        $backgroundColorRgbR,
+        $backgroundColorRgbG,
+        $backgroundColorRgbB,
+        $rotateX,
+        $rotateY,
+        $rotateZ,
+        $translateX,
+        $translateY,
+        $translateZ,
+        $transformOriginX,
+        $transformOriginY,
+        $transformOriginZ
     ) : int {
         $sql = '
             INSERT
               INTO `ground` (
-                   `user_id`
+                   `background_color_rgb_r`
+                 , `background_color_rgb_g`
+                 , `background_color_rgb_b`
+                 , `rotate_x`
+                 , `rotate_y`
+                 , `rotate_z`
+                 , `translate_x`
+                 , `translate_y`
+                 , `translate_z`
+                 , `transform_origin_x`
+                 , `transform_origin_y`
+                 , `transform_origin_z`
                    )
-            VALUES (?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                  ;
         ';
         $parameters = [
-            $userId,
+            $backgroundColorRgbR,
+            $backgroundColorRgbG,
+            $backgroundColorRgbB,
+            $rotateX,
+            $rotateY,
+            $rotateZ,
+            $translateX,
+            $translateY,
+            $translateZ,
+            $transformOriginX,
+            $transformOriginY,
+            $transformOriginZ,
         ];
         return $this->adapter
                     ->query($sql)
