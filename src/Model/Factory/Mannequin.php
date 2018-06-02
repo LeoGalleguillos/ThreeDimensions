@@ -39,6 +39,7 @@ class Mannequin
                         ->setTranslateX($array['translate_x'])
                         ->setTranslateY($array['translate_y'])
                         ->setTranslateZ($array['translate_z'])
+                        ->setDistanceTraveled($array['distance_traveled'])
                         ->setUserId($array['user_id']);
 
         return $mannequinEntity;

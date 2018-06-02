@@ -86,6 +86,7 @@ class Mannequin
                  , `mannequin`.`transform_origin_x`
                  , `mannequin`.`transform_origin_y`
                  , `mannequin`.`transform_origin_z`
+                 , `mannequin`.`distance_traveled`
                  , `mannequin`.`created`
                  , `mannequin`.`updated`
               FROM `mannequin`
