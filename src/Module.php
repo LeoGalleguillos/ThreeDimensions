@@ -38,6 +38,11 @@ class Module
                         $serviceManager->get('main')
                     );
                 },
+                ThreeDimensionsTable\Ground::class => function ($serviceManager) {
+                    return new ThreeDimensionsTable\Ground(
+                        $serviceManager->get('main')
+                    );
+                },
                 ThreeDimensionsTable\Mannequin::class => function ($serviceManager) {
                     return new ThreeDimensionsTable\Mannequin(
                         $serviceManager->get('main')
