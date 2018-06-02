@@ -25,6 +25,27 @@ class Entity
         return $this->updated;
     }
 
+    public function setBackgroundColorRgbR(
+        int $backgroundColorRgbR
+    ) : ThreeDimensionsEntity\Entity {
+        $this->backgroundColorRgbR = $backgroundColorRgbR;
+        return $this;
+    }
+
+    public function setBackgroundColorRgbG(
+        int $backgroundColorRgbG
+    ) : ThreeDimensionsEntity\Entity {
+        $this->backgroundColorRgbG = $backgroundColorRgbG;
+        return $this;
+    }
+
+    public function setBackgroundColorRgbB(
+        int $backgroundColorRgbB
+    ) : ThreeDimensionsEntity\Entity {
+        $this->backgroundColorRgbB = $backgroundColorRgbB;
+        return $this;
+    }
+
     public function setCreated(DateTime $created) : ThreeDimensionsEntity\Entity
     {
         $this->created = $created;

@@ -28,17 +28,21 @@ class Ground
         array $array
     ) : ThreeDimensionsEntity\Ground {
         $groundEntity = new ThreeDimensionsEntity\Ground();
-        $groundEntity->setCreated(new DateTime($array['created']))
-                        ->setGroundId($array['ground_id'])
-                        ->setRotateX($array['rotate_x'])
-                        ->setRotateY($array['rotate_y'])
-                        ->setRotateZ($array['rotate_z'])
-                        ->setTransformOriginX($array['transform_origin_x'])
-                        ->setTransformOriginY($array['transform_origin_y'])
-                        ->setTransformOriginZ($array['transform_origin_z'])
-                        ->setTranslateX($array['translate_x'])
-                        ->setTranslateY($array['translate_y'])
-                        ->setTranslateZ($array['translate_z']);
+        $groundEntity
+            ->setBackgroundColorRgbR($array['background_color_rgb_r'])
+            ->setBackgroundColorRgbG($array['background_color_rgb_g'])
+            ->setBackgroundColorRgbB($array['background_color_rgb_b'])
+            ->setCreated(new DateTime($array['created']))
+            ->setGroundId($array['ground_id'])
+            ->setRotateX($array['rotate_x'])
+            ->setRotateY($array['rotate_y'])
+            ->setRotateZ($array['rotate_z'])
+            ->setTransformOriginX($array['transform_origin_x'])
+            ->setTransformOriginY($array['transform_origin_y'])
+            ->setTransformOriginZ($array['transform_origin_z'])
+            ->setTranslateX($array['translate_x'])
+            ->setTranslateY($array['translate_y'])
+            ->setTranslateZ($array['translate_z']);
 
         return $groundEntity;
     }
