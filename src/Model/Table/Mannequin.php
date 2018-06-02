@@ -108,6 +108,7 @@ class Mannequin
         float $transformOriginX,
         float $transformOriginY,
         float $transformOriginZ,
+        float $distanceTraveled,
         int $userId
     ) : bool {
         $sql = '
@@ -121,6 +122,7 @@ class Mannequin
                  , `transform_origin_x` = ?
                  , `transform_origin_y` = ?
                  , `transform_origin_z` = ?
+                 , `distance_traveled` = ?
                  , `updated` = CURRENT_TIMESTAMP()
              WHERE `user_id` = ?
                  ;
@@ -135,6 +137,7 @@ class Mannequin
             $transformOriginX,
             $transformOriginY,
             $transformOriginZ,
+            $distanceTraveled,
             $userId,
         ];
         return (bool) $this->adapter
