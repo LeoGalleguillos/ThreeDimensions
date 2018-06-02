@@ -73,6 +73,29 @@ class Ground
                     ->getGeneratedValue();
     }
 
+    public function select() : Generator
+    {
+        $sql = '
+            SELECT `background_color_rgb_r`
+                 , `background_color_rgb_g`
+                 , `background_color_rgb_b`
+                 , `rotate_x`
+                 , `rotate_y`
+                 , `rotate_z`
+                 , `translate_x`
+                 , `translate_y`
+                 , `translate_z`
+                 , `transform_origin_x`
+                 , `transform_origin_y`
+                 , `transform_origin_z`
+              FROM `ground`
+                 ;
+        ';
+        foreach ($this->adapter->query($sql)->execute()->current() as $array) {
+            yield $array;
+        }
+    }
+
     public function selectCount()
     {
         $sql = '
