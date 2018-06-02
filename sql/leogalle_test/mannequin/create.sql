@@ -10,6 +10,7 @@ CREATE TABLE `mannequin` (
     `transform_origin_x` FLOAT(8, 2) SIGNED,
     `transform_origin_y` FLOAT(8, 2) SIGNED,
     `transform_origin_z` FLOAT(8, 2) SIGNED,
+    `distance_traveled` FLOAT(8, 2) UNSIGNED,
     `created` datetime not null default CURRENT_TIMESTAMP(),
     `updated` datetime default null,
     PRIMARY KEY (`mannequin_id`)
