@@ -76,7 +76,8 @@ class Ground
     public function select() : Generator
     {
         $sql = '
-            SELECT `background_color_rgb_r`
+            SELECT `ground_id`
+                 , `background_color_rgb_r`
                  , `background_color_rgb_g`
                  , `background_color_rgb_b`
                  , `rotate_x`
@@ -88,10 +89,11 @@ class Ground
                  , `transform_origin_x`
                  , `transform_origin_y`
                  , `transform_origin_z`
+                 , `created`
               FROM `ground`
                  ;
         ';
-        foreach ($this->adapter->query($sql)->execute()->current() as $array) {
+        foreach ($this->adapter->query($sql)->execute() as $array) {
             yield $array;
         }
     }
