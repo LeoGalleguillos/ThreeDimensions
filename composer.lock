@@ -709,12 +709,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "526470b48d051ea68df646e0884a9349e776bd0c"
+                "reference": "39786a30d2cf34ba4955ec2287c53bdc8a4aa9e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/526470b48d051ea68df646e0884a9349e776bd0c",
-                "reference": "526470b48d051ea68df646e0884a9349e776bd0c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/39786a30d2cf34ba4955ec2287c53bdc8a4aa9e9",
+                "reference": "39786a30d2cf34ba4955ec2287c53bdc8a4aa9e9",
                 "shasum": ""
             },
             "require": {
@@ -785,7 +785,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-05-25 12:14:11"
+            "time": "2018-06-10 12:07:12"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1550,12 +1550,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-config.git",
-                "reference": "f02d94b13bbb782ee7bd632d7f1dbf5c6849bbfe"
+                "reference": "a3154cdaa1b161653e4607a45e867f8cf1832d3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-config/zipball/f02d94b13bbb782ee7bd632d7f1dbf5c6849bbfe",
-                "reference": "f02d94b13bbb782ee7bd632d7f1dbf5c6849bbfe",
+                "url": "https://api.github.com/repos/zendframework/zend-config/zipball/a3154cdaa1b161653e4607a45e867f8cf1832d3c",
+                "reference": "a3154cdaa1b161653e4607a45e867f8cf1832d3c",
                 "shasum": ""
             },
             "require": {
@@ -1602,7 +1602,7 @@
                 "config",
                 "zf"
             ],
-            "time": "2018-05-29 19:58:20"
+            "time": "2018-06-04 17:01:48"
         },
         {
             "name": "zendframework/zend-console",
